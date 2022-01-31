@@ -26,7 +26,7 @@ MW::MW(QWidget *parent)
 
     InsertLine("Special Apps Remover (U.S.A Android Phones) (ADB ONLY)","Version 1.0");
     InsertLine("Supports deleting the applications","some American companies");
-    InsertLine("#","Temporary delete");
+    InsertLine("#","Temporary delete (Without Root)");
     InsertLine("#","permanent delete (NEED Root)");
 
     InsertLine("companies supported by the first version","4");
