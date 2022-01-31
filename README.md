@@ -1,7 +1,7 @@
 # Special-Apps-Remover
 Special Apps Remover (U.S.A Android Phones) (ADB ONLY) Supports deleting the applications of some American companies
 
-## 1-Temporary delete
+## 1-Temporary delete (without Root)
 ## 2-permanent delete (NEED Root)
 companies supported by the first version
 - 1 .Verzion
