@@ -24,9 +24,9 @@ MW::MW(QWidget *parent)
     label.setOpenExternalLinks(true);
     ui->statusbar->addWidget(&label);
 
-    InsertLine("Special Apps Remover (U.S.A Android Phones) (ADB ONLY)","Version 1.0");
+    InsertLine("Special Apps Remover (U.S.A Android Phones) (ADB ONLY)","Version 1.1");
     InsertLine("Supports deleting the applications","some American companies");
-    InsertLine("#","Temporary delete (Without Root)");
+    InsertLine("#","Temporary delete");
     InsertLine("#","permanent delete (NEED Root)");
 
     InsertLine("companies supported by the first version","4");
@@ -35,6 +35,7 @@ MW::MW(QWidget *parent)
     InsertLine("#3","AT&T");
     InsertLine("#4","Microsoft");
     InsertLine2("Supported Multi Brands {LG/Samsung/ZTE/ANS...}",0);
+    InsertLine2("Remove System Ota/Update Apps No Need Root",0);
     InsertLine2("Only OneClick",0);
 
 }
@@ -161,7 +162,8 @@ QStringList MW::LoadListApps(QStringList &ids){
         }
         listApps<<carrierApps;
         Append("Detect "+strComment.toUpper()+" Apps");
-        Insert(QString::number(carrierApps.count()));
+        //        Insert(QString::number(carrierApps.count()));
+        Insert("Successfully");
         Wait(200);
     }
     return listApps;
@@ -173,6 +175,9 @@ bool MW::RemoveApps()
     QString rel,strComment,package;;
     int apps=0;
     Carriers=QStringList(QStringList()<<"spr"<<"amazon"<<"vzw"<<"microsoft"<<"att");
+    if(ui->ch_RmUpApps->isChecked()){
+        Carriers<<"ota"<<"update";
+    }
     listApps=LoadListApps(Carriers);
     if(!listApps.isEmpty() && ui->ch_UseSU->isChecked()){
         InsertLine2("selected Remove Apps By Root!");
