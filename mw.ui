@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Special Apps Remover (U.S.A Android Phones)</string>
+   <string>Special Apps Remover (U.S.A Android Phones) v1.1</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -27,11 +27,22 @@ p, li { white-space: pre-wrap; }
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QCheckBox" name="ch_UseSU">
-      <property name="text">
-       <string>Use Super User(Need ROOT)</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QCheckBox" name="ch_UseSU">
+        <property name="text">
+         <string>Use Super User(Need ROOT)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="ch_RmUpApps">
+        <property name="text">
+         <string>Remove Ota/Update Apps</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item row="2" column="0">
      <widget class="QPushButton" name="btnRemove">
